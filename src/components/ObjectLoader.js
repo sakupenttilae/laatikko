@@ -1,17 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import kkk from "../objects/Laatikko.glb"
+import sss from "../objects/Laatikko.glb"
 
 
 const ObjectLoader = ({ objectName, scene, setObjectRef }) => {
 
   const objectRef = useRef();
+  console.log("OBJECT LOADER MOUNTED")
 
   useEffect(() => {
     const loader = new GLTFLoader();
     loader.load(
-      kkk,
+      sss,
       (object) => {
 
         // Calculate the bounding box of the object
