@@ -184,13 +184,13 @@ const Scene = () => {
           {useScrollRotation ? 'Disable Scroll Rotation' : 'Enable Scroll Rotation'}
         </button>
       </div>
-      <div style={{ position: 'absolute', top: 10, left: 290 }}>
+      <div style={{ position: 'absolute', top: 30, left: 10 }}>
         <button onClick={() => setUseOrbitControls(!useOrbitControls)}>
           {useOrbitControls ? 'Disable Orbit Controls' : 'Enable Orbit Controls'}
         </button>
       </div>
       {useOrbitControls && (
-        <div style={{ position: 'absolute', top: 10, left: 570 }}>
+        <div style={{ position: 'absolute', top: 50, left: 10 }}>
           <button onClick={() => setUseZoom(!useZoom)}>
             {useZoom ? 'Disable Zoom' : 'Enable Zoom'}
           </button>
