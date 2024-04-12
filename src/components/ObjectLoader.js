@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import sss from "../objects/Laatikko.glb";
 
-const ObjectLoader = ({ objectName, scene, setObjectRef, setLoadingComplete }) => {
+const ObjectLoader = ({ objectName, scene, setObjectRef }) => {
   const objectRef = useRef();
 
   useEffect(() => {
@@ -21,7 +21,6 @@ const ObjectLoader = ({ objectName, scene, setObjectRef, setLoadingComplete }) =
         scene.current.add(object.scene);
         objectRef.current = object;
         setObjectRef(object.scene);
-        setLoadingComplete(true)
       },
       undefined,
       (error) => {
