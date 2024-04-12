@@ -15,6 +15,8 @@ const Scene = () => {
   const controlsRef = useRef();
   const objectRef = useRef();
   const lastScrollDeltaRef = useRef(0);
+
+  const [loadingComplete, setLoadingComplete] = useState(false);
   
   
   const directionalLightRef = useRef()
@@ -26,6 +28,7 @@ const Scene = () => {
   // Callback function to set objectRef
   const setObjectRef = (object) => {
     objectRef.current = object;
+    setLoadingComplete(true);
   };
 
   //ensure scene is set only once
@@ -78,9 +81,11 @@ const Scene = () => {
 
   }, [])
 
-
+  //dear chatgpt how to not get to this line before objectloader run
   useEffect(() => {
-    controlsRef.current.reset();
+    if (!loadingComplete) return console.log("not ready !!!!!!" );
+    console.log("ready now")
+
     cameraRef.current.position.set(0, 0, 5);
 
     // Append renderer to the DOM
@@ -128,7 +133,7 @@ const Scene = () => {
         canvasRef.current.remove(objectRef.current);
       }
     };
-  }, []);
+  }, [loadingComplete]);
 
     //start spinning the bottle instantly
     useEffect(() => {
@@ -196,7 +201,7 @@ const Scene = () => {
           </button>
         </div>
       )}
-      <ObjectLoader scene={canvasRef} setObjectRef={setObjectRef}/>
+      <ObjectLoader scene={canvasRef} setObjectRef={setObjectRef} setLoadingComplete={setLoadingComplete}/>
       
     </>
   ) 
