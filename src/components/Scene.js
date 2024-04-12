@@ -178,7 +178,7 @@ const Scene = () => {
   return (
     <>
       <div ref={sceneRef} />
-
+    
       <div style={{ position: 'absolute', top: 10, left: 10 }}>
         <button onClick={() => setUseScrollRotation(!useScrollRotation)}>
           {useScrollRotation ? 'Disable Scroll Rotation' : 'Enable Scroll Rotation'}
@@ -197,6 +197,7 @@ const Scene = () => {
         </div>
       )}
       <ObjectLoader scene={canvasRef} setObjectRef={setObjectRef}/>
+      
     </>
   ) 
 };
