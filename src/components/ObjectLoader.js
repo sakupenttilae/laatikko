@@ -40,7 +40,7 @@ const ObjectLoader = ({ objectName, scene, setObjectRef }) => {
     };
   }, [objectName]);
 
-  return loading ? <div>Loading...</div> : null; // Render loader if still loading
+  return null; // Render loader if still loading
 };
 
 export default ObjectLoader;
