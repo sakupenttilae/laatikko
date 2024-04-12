@@ -4,7 +4,6 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import sss from "../objects/Laatikko.glb";
 
 const ObjectLoader = ({ objectName, scene, setObjectRef }) => {
-  console.log(loading)
   const objectRef = useRef();
 
   useEffect(() => {
