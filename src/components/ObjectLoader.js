@@ -4,7 +4,6 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import sss from "../objects/Laatikko.glb";
 
 const ObjectLoader = ({ objectName, scene, setObjectRef }) => {
-  const [loading, setLoading] = useState(true);
   console.log(loading)
   const objectRef = useRef();
 
@@ -23,13 +22,10 @@ const ObjectLoader = ({ objectName, scene, setObjectRef }) => {
         scene.current.add(object.scene);
         objectRef.current = object;
         setObjectRef(object.scene);
-        setLoading(false); // Set loading state to false when object is loaded
-        console.log(loading)
       },
       undefined,
       (error) => {
         console.error('An error occurred while loading the GLTF model:', error);
-        setLoading(false); // Set loading state to false on error
       }
     );
 
