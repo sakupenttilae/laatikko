@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/laatikko/static/css/main.e6c13ad2.css",
-    "main.js": "/laatikko/static/js/main.3e1d80e7.js",
+    "main.js": "/laatikko/static/js/main.d75653b1.js",
     "static/js/453.098eedb2.chunk.js": "/laatikko/static/js/453.098eedb2.chunk.js",
     "static/media/Laatikko.glb": "/laatikko/static/media/Laatikko.a17c670f022ec1c4b316.glb",
     "index.html": "/laatikko/index.html",
     "main.e6c13ad2.css.map": "/laatikko/static/css/main.e6c13ad2.css.map",
-    "main.3e1d80e7.js.map": "/laatikko/static/js/main.3e1d80e7.js.map",
+    "main.d75653b1.js.map": "/laatikko/static/js/main.d75653b1.js.map",
     "453.098eedb2.chunk.js.map": "/laatikko/static/js/453.098eedb2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.3e1d80e7.js"
+    "static/js/main.d75653b1.js"
   ]
 }
