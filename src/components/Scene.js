@@ -78,7 +78,6 @@ const Scene = () => {
 
   }, [])
 
-  //dear chatgpt how to not get to this line before objectloader run
   useEffect(() => {
 
     cameraRef.current.position.set(0, 0, 5);
