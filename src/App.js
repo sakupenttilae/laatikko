@@ -11,6 +11,7 @@ const App = () => {
   
 
   const [count, setCount] = useState(0);
+  console.log("ennen ",document.title)
 
   var i = 0;var intervalId = setInterval(function(){   if(i === 10){
     clearInterval(intervalId);
@@ -20,7 +21,10 @@ const App = () => {
     chars.unshift(lastChar);
     let newStr = chars.join("");
     document.title=newStr.toString();
+    console.log("jälkeen ",document.title)
 }, 1000);
+
+
 
   return (
       <div>
